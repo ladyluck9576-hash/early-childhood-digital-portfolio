@@ -22,25 +22,12 @@ body::before,body::after,.portfolio-page::before,.portfolio-page::after,.referen
 .source-item{transition:transform .18s ease,box-shadow .18s ease!important}
 .source-item:hover{transform:translateY(-2px)!important;box-shadow:0 13px 28px rgba(24,47,39,.08)!important}
 
-/* subtle side-corner botanical accents, not full edge vines */
-main::before,main::after{
-  content:"";
-  position:fixed;
-  top:130px;
-  width:110px;
-  height:150px;
-  pointer-events:none;
-  z-index:0;
-  opacity:.11;
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size:contain;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 160'%3E%3Cg fill='none' stroke='%236f897d' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M14 150C27 108 48 72 91 18'/%3E%3Cpath d='M39 108c-13-18-24-25-35-20'/%3E%3Cpath d='M61 75c15-14 29-18 42-10'/%3E%3Cpath d='M79 44c-11-13-20-18-30-15'/%3E%3C/g%3E%3Cg fill='%23c9a65d'%3E%3Cellipse cx='13' cy='88' rx='17' ry='7' transform='rotate(24 13 88)'/%3E%3Cellipse cx='103' cy='65' rx='17' ry='7' transform='rotate(-25 103 65)'/%3E%3C/g%3E%3Cg fill='%238da99c'%3E%3Cellipse cx='48' cy='106' rx='18' ry='7' transform='rotate(-40 48 106)'/%3E%3Cellipse cx='70' cy='40' rx='17' ry='7' transform='rotate(35 70 40)'/%3E%3C/g%3E%3C/svg%3E");
-}
-main::before{left:8px}
-main::after{right:8px;transform:scaleX(-1)}
+/* Screenshot-style thin repeated side floral vines */
+main::before,main::after{display:none!important;content:none!important}
+.portfolio-page,.reference-page,.home-main{position:relative}
+.portfolio-page::before,.portfolio-page::after,.reference-page::before,.reference-page::after,.home-main::before,.home-main::after{content:""!important;display:block!important;position:absolute!important;top:82px!important;bottom:30px!important;width:52px!important;height:auto!important;pointer-events:none!important;opacity:.42!important;z-index:0!important;background-repeat:repeat-y!important;background-size:46px 190px!important}
+.portfolio-page::before,.reference-page::before,.home-main::before{left:-34px!important;right:auto!important;transform:none!important;background-position:left top!important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 190'%3E%3Cg fill='none' stroke='%23d0d2ca' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M24 4c-1 28-1 52-2 74c7 13 14 27 19 39c-9 15-16 31-20 49'/%3E%3C/g%3E%3Cg fill='%23e2e1d8'%3E%3Cellipse cx='11' cy='30' rx='10' ry='5' transform='rotate(-34 11 30)'/%3E%3Cellipse cx='35' cy='53' rx='10' ry='5' transform='rotate(36 35 53)'/%3E%3Cellipse cx='10' cy='94' rx='10' ry='5' transform='rotate(-34 10 94)'/%3E%3Cellipse cx='37' cy='121' rx='10' ry='5' transform='rotate(36 37 121)'/%3E%3Cellipse cx='12' cy='158' rx='10' ry='5' transform='rotate(-34 12 158)'/%3E%3C/g%3E%3Cg fill='%23d8c99f'%3E%3Cellipse cx='37' cy='82' rx='9' ry='4.5' transform='rotate(35 37 82)'/%3E%3Cellipse cx='11' cy='135' rx='9' ry='4.5' transform='rotate(-35 11 135)'/%3E%3C/g%3E%3C/svg%3E")!important}
+.portfolio-page::after,.reference-page::after,.home-main::after{right:-34px!important;left:auto!important;transform:none!important;background-position:right top!important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 190'%3E%3Cg transform='translate(46 0) scale(-1 1)'%3E%3Cg fill='none' stroke='%23d0d2ca' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M24 4c-1 28-1 52-2 74c7 13 14 27 19 39c-9 15-16 31-20 49'/%3E%3C/g%3E%3Cg fill='%23e2e1d8'%3E%3Cellipse cx='11' cy='30' rx='10' ry='5' transform='rotate(-34 11 30)'/%3E%3Cellipse cx='35' cy='53' rx='10' ry='5' transform='rotate(36 35 53)'/%3E%3Cellipse cx='10' cy='94' rx='10' ry='5' transform='rotate(-34 10 94)'/%3E%3Cellipse cx='37' cy='121' rx='10' ry='5' transform='rotate(36 37 121)'/%3E%3Cellipse cx='12' cy='158' rx='10' ry='5' transform='rotate(-34 12 158)'/%3E%3C/g%3E%3Cg fill='%23d8c99f'%3E%3Cellipse cx='37' cy='82' rx='9' ry='4.5' transform='rotate(35 37 82)'/%3E%3Cellipse cx='11' cy='135' rx='9' ry='4.5' transform='rotate(-35 11 135)'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")!important}
+.portfolio-page>*,.reference-page>*,.home-main>*{position:relative;z-index:1}
 
-@media(max-width:900px){
-  .portfolio-page>p,.source-item,.reference-page>p,.home-section{background-size:auto,175px auto!important}
-  main::before,main::after{display:none}
-}
+@media(max-width:900px){.portfolio-page>p,.source-item,.reference-page>p,.home-section{background-size:auto,175px auto!important}.portfolio-page::before,.portfolio-page::after,.reference-page::before,.reference-page::after,.home-main::before,.home-main::after{width:34px!important;background-size:30px 160px!important;opacity:.34!important}.portfolio-page::before,.reference-page::before,.home-main::before{left:-17px!important}.portfolio-page::after,.reference-page::after,.home-main::after{right:-17px!important}}
