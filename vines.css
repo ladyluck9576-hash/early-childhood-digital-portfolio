@@ -1,0 +1,20 @@
+/* Restored original-style full side floral vines */
+body::before,body::after{
+  display:block!important;
+  content:""!important;
+  position:fixed!important;
+  top:105px!important;
+  bottom:24px!important;
+  width:92px!important;
+  z-index:0!important;
+  pointer-events:none!important;
+  opacity:.13!important;
+  background-repeat:repeat-y!important;
+  background-size:82px 220px!important;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 220'%3E%3Cpath d='M45 0c1 38-10 68-23 96 13 26 25 56 23 124' fill='none' stroke='%236f887d' stroke-width='3'/%3E%3Cellipse cx='25' cy='47' rx='13' ry='7' transform='rotate(-35 25 47)' fill='%23a9bbaa'/%3E%3Cellipse cx='60' cy='78' rx='14' ry='7' transform='rotate(31 60 78)' fill='%23c7aa68'/%3E%3Cellipse cx='23' cy='119' rx='13' ry='7' transform='rotate(-32 23 119)' fill='%23a9bbaa'/%3E%3Cellipse cx='60' cy='153' rx='14' ry='7' transform='rotate(34 60 153)' fill='%23c7aa68'/%3E%3Cellipse cx='27' cy='191' rx='13' ry='7' transform='rotate(-31 27 191)' fill='%23a9bbaa'/%3E%3C/svg%3E")!important;
+}
+body::before{left:0!important}
+body::after{right:0!important;transform:scaleX(-1)!important}
+main,.portfolio-page,.reference-page,.home-main,footer{position:relative!important;z-index:1!important}
+@media(max-width:1050px){body::before,body::after{opacity:.08!important;width:68px!important;background-size:60px 180px!important}}
+@media(max-width:900px){body::before,body::after{display:none!important}}
