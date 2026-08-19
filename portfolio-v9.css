@@ -34,6 +34,45 @@ main::before,main::after{display:none!important;content:none!important}
 }
 .portfolio-page>*,.reference-page>*,.home-main>*{position:relative;z-index:1}
 
+/* home details: 4 balanced cards on the first row, 3 balanced cards centered below */
+.home-hero{padding-right:34%!important}
+.home-hero .hero-inner{max-width:1080px!important;width:100%!important}
+.details{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  justify-content:center!important;
+  align-items:stretch!important;
+  gap:16px!important;
+  max-width:1000px!important;
+  margin:30px auto 0!important;
+}
+.details .detail,
+.details .detail:nth-child(-n+4),
+.details .detail:nth-child(5),
+.details .detail:nth-child(6),
+.details .detail:nth-child(7){
+  grid-column:auto!important;
+  flex:0 1 calc(25% - 14px)!important;
+  min-width:205px!important;
+  min-height:135px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:18px 16px!important;
+}
+.details .detail:nth-child(3){font-size:.93rem!important}
+.details .detail b{margin-bottom:7px!important}
+
+@media(max-width:1100px){
+  .home-hero{padding-right:7vw!important;padding-bottom:390px!important}
+  .details .detail,
+  .details .detail:nth-child(-n+4),
+  .details .detail:nth-child(5),
+  .details .detail:nth-child(6),
+  .details .detail:nth-child(7){flex-basis:calc(33.333% - 14px)!important;min-width:190px!important}
+}
+
 @media(max-width:900px){
   .portfolio-page::before,.portfolio-page::after,.reference-page::before,.reference-page::after,.home-main::before,.home-main::after{
     width:34px!important;
@@ -42,4 +81,17 @@ main::before,main::after{display:none!important;content:none!important}
   }
   .portfolio-page::before,.reference-page::before,.home-main::before{left:-17px!important}
   .portfolio-page::after,.reference-page::after,.home-main::after{right:-17px!important}
+  .details .detail,
+  .details .detail:nth-child(-n+4),
+  .details .detail:nth-child(5),
+  .details .detail:nth-child(6),
+  .details .detail:nth-child(7){flex-basis:calc(50% - 12px)!important}
+}
+
+@media(max-width:560px){
+  .details .detail,
+  .details .detail:nth-child(-n+4),
+  .details .detail:nth-child(5),
+  .details .detail:nth-child(6),
+  .details .detail:nth-child(7){flex-basis:100%!important;min-width:0!important;min-height:115px!important}
 }
